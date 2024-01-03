@@ -5,6 +5,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+// Permet d'inscrire les équipes à un match via une requête PDO préparée qui insère les données dans la base equipe_partie
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(isset($_POST['premiere_equipe']) && isset($_POST['deuxieme_equipe'])) {
         if($_POST['premiere_equipe'] != $_POST['deuxieme_equipe']) {

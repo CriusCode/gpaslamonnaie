@@ -2,7 +2,6 @@
 include('config.php');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-$result_inscription=$stmt->fetchAll();
 ?>
 
 <h2>Formulaire d'enregistrement d'une nouvelle équipe</h2>

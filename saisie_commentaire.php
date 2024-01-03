@@ -1,5 +1,3 @@
-
-
 <!-- formulaire_commentaire.php -->
 <form action="traitement_commentaire.php" method="post">
     <!-- Vos champs de formulaire, y compris le champ pour le commentaire -->

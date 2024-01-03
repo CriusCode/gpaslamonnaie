@@ -8,7 +8,9 @@ $stmt = $mysqlClient->query($sql);
 $result_inscription=$stmt->fetchAll();
 ?>
 
-<h2>Formulaire d'enregistrement d'une nouvelle équipe</h2>
+<h2>Formulaire d'enregistrement d'une nouvelle partie</h2>
+
+<!-- Permet d'avoir un select qui s'alimente depuis la base de données -->
 
 <form action="creation-partie.php" method="post" style="display: flex;gap: 10px;flex-direction: column;max-width: 350px;padding-bottom: 30px;">
     <label for="premiere_equipe">Première équipe :</label>

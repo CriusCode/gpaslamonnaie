@@ -143,7 +143,7 @@ foreach($result as $result_treat) {
     echo '<tr>
     <td>' . $result_treat["nom_equipe"] . '</td>
     <td>' . (($result_treat["confirmation_equipe"]==0) ? 'Non' : 'Oui') . '</td>';
-    // Fetching all linked players
+    // Récupère tous les joueurs liés à l'équipe
     $sqlPlayers = "SELECT * FROM Joueur WHERE id_equipe=?";
     $stmPlayers = $mysqlClient->prepare($sqlPlayers);
     $allPlayers=$stmPlayers->execute([$result_treat["id_equipe"]]);

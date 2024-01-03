@@ -1,5 +1,5 @@
 <?php
-// Exemple d'insertion
+// Test interne afin de découvrir l'ajout de nouvelles données via PDO
 $equipe1 = "Nom Equipe 1";
 $equipe2 = "Nom Equipe 2";
 $score1 = 2;

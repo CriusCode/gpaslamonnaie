@@ -19,7 +19,6 @@ $result_inscription=$stmt->fetchAll();
     <input type="text" id="nom_joueur" name="nom_joueur" required>
 
     <label for="nom_equipe">Nom de l'Équipe :</label>
-    <!-- <input type="text" id="nom_equipe" name="nom_equipe" required> -->
     <select id="nom_equipe" name="nom_equipe">
         <?php
         foreach($result_inscription as $equipe) {
@@ -37,7 +36,10 @@ $result_inscription=$stmt->fetchAll();
     <input type="email" id="email_joueur" name="email_joueur" required>
 
     <label for="certificat_medical">Certificat d'Aptitude Sportive :</label>
-    <input type="text" id="certificat_medical" name="certificat_medical" required>
+    <select name="certificat_medical" id="certificat_medical"> 
+        <option value="OUI"> Oui </option>
+        <option value="NON"> Non </option>
+    </select>
 
     <button type="submit">Inscrire le joueur</button>
 </form>

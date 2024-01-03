@@ -1,5 +1,8 @@
 <?php
 include 'config.php';
+
+// Fonction pour récupérer le nom de l'équipe via son identifiant
+
 function retrieveTeamById($idEquipe) {
     include 'config.php';
 
@@ -12,6 +15,9 @@ function retrieveTeamById($idEquipe) {
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+// Mise à jour et vérification du score, afin de s'assurer qu'il ne dépasse pas 40
+
 if(isset($_POST['score-1']) && isset($_POST['score-2']))
 {
     if($_POST['score-1']<=40 && isset($_POST['score-2'])<=40) {

@@ -11,6 +11,8 @@
 </style>
 <?php
 include 'config.php';
+
+// Fonction pour récupérer le nom de l'équipe via son identifiant
 function retrieveTeamById($idEquipe) {
     include 'config.php';
 
@@ -23,6 +25,9 @@ function retrieveTeamById($idEquipe) {
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+// Condition qui permet de vérifier si un commentaire est en cours d'envoi
+
 if(isset($_POST['partie_id']) && isset($_POST['commentaire']))
 {
     if(!empty($_POST['commentaire'])) {
@@ -38,8 +43,10 @@ if(isset($_POST['partie_id']) && isset($_POST['commentaire']))
         echo "Votre commentaire ne pas être vide";
     }
 }
+
+// Condition permettant de vérifier si un match est passé en argument, si tel et le cas, la partie est récupérée
+
 if (isset($_GET['idI'])) {
-    include('config.php');
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     $sql = "SELECT * FROM Equipe_Partie WHERE id_equipe_partie=?";

@@ -15,11 +15,13 @@ include 'config.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Séléction des éléments nécéssaires à la création du classement 
 $sql = "SELECT Equipe.nom_equipe, Equipe_Partie.score_equipe1, Equipe_Partie.score_equipe2
         FROM Equipe_Partie, Equipe
         WHERE Equipe_Partie.id_equipe1 = Equipe.id_equipe";
 $result = $mysqlClient->query($sql);
 
+// Condition permettant d'afficher une équipe dans le tableau de classement, si celle-ci a un résultat 
 if ($result) {
     echo '<table>
     <tr>
